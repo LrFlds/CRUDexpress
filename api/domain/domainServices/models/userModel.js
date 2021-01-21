@@ -2,5 +2,9 @@ const mongoose = require('mongoose');
 const UserSchema = require('../../schema/userSchema');
 
 
-const UserModel = mongoose.model('UserModel', UserSchema);
+
+/***********Le model permet d'exporter le schema dans la bdd mais aussi aux controllers ************/
+const UserModel = mongoose.model('UserModel'/*=>NOM dans la bdd*/, UserSchema);
 module.exports = UserModel;
+
+/**GO => CONTROLLER **/
