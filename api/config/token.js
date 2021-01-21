@@ -1,5 +1,5 @@
 const jwt = require('jsonwebtoken')
-const User = require('../domain/domainServices/models')
+const User = require('../domain/domainServices/models/userModel')
 
 
 function ensureToken(req,res, next){
