@@ -2,7 +2,7 @@ const mongoose = require('mongoose');
 const UserSchema = require('../../schema/userSchema');
 const bcrypt = require('bcrypt');
 
-UserSchema.pre('save', async function(next){
+UserSchema.pre('save', async function(next){//
     try{
         const salt = await bcrypt.genSalt(10)
         const hash = await bcrypt.hash(this.Password,salt)
