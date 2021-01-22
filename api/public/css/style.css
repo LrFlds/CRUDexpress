@@ -58,6 +58,7 @@ a {
 }
 
 
+ /* //////////////////////////// */
 
 
 /* SignUp part  */
@@ -77,17 +78,23 @@ a {
 
 .main-box-signin {
     background-image: url("../img/img-signin.jpg");
+    background-repeat: no-repeat;
     width: 100%;
     height: 100%;
+
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    align-items: center;
 }
 
 .style-form {
     position: relative;
     width: 500px;
-    height: 650px;
+    height: auto;
     background-color:rgb(243, 243, 243);
     opacity: 85%;
-    border: black solid 1px;
+    
     border-radius: 20px;
     display: flex;
     flex-direction: column;
@@ -99,14 +106,32 @@ a {
     padding: 20px;
 }
 
+.head-content-form {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.arrow-back {
+    width: 30px;
+    height: 30px;
+    transform:rotate(90deg) ;
+}
+
 .box-input {
     display: flex;
     flex-direction: column;
-    padding: 20px;
+    padding: 10px;
 }
 .box-input a {
     font-size: 13px;
     padding: 5px;
+    transition: ease-in-out all 250ms;
+}
+
+.box-input a:hover {
+    transition: ease-in-out all 250ms;
+    color: rgb(117, 117, 231) ;
 }
 
 .style-input {
@@ -114,6 +139,9 @@ a {
     border-radius: 5px;
 }
 
+label {
+    font-weight: bold;
+}
 
 hr {
     background-color: black;
@@ -131,13 +159,85 @@ hr {
 }
 
 .social img{
-    width: 100px;
-    height: 100px;
+    width: 75px;
+    height: 75px;
 }
 
 .box-button {
     display: flex;
     flex-direction: row;
     justify-content: space-around ;
-    
+    width: 100%;
+    height: 100%;
+    align-content: center;
+    align-items: center;
+    margin: 50px;
+}
+
+.box-button button {
+    height: 50px;
+    width: 175px;
+    border: black solid 2px;
+    background-color:white;
+    border-radius: 5px;
+    transition: ease-in-out all 250ms;
+}
+.box-button a {
+    padding: 15px 50px;
+}
+
+button:hover {
+    transition: ease-in-out all 250ms;
+    border: rgb(117, 117, 231) solid 2px;
+}
+
+
+/* Profil Part ///////////////////// */
+
+.header-profil {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 15%;
+    width: 100%;
+    background-color: rgb(43, 43, 43);
+}
+.header-profil a {
+    padding: 15px;
+}
+
+.home {
+    color: white;
+}
+.disconnect {
+    color: red;
+}
+
+.container-profil{
+    display: flex;
+    flex-direction: row;
+  
+    align-items: center;
+    background-image: url("../img/img-profil.jpg");
+    height: 350px;
+}
+
+.profil-content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.profil-pic {
+    width: 150px;
+    height: 150px;
+    margin: 50px;
+    background-color: rgb(117, 117, 231);
+    border-radius: 100px;
+    border: rgb(43, 43, 43) solid 2px;
+}
+
+.profil-result h2{
+    margin: 20px;
 }

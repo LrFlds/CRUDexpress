@@ -12,7 +12,8 @@ function ensureToken(req,res, next){
         jwt.verify(bearer, 'MY_SECRET_KEY', function(err, data){
             if(err){
                 res.status(403).send('token non valide !')              
-            }else {
+            }
+            else {
                 req.user = data
                 next();
             }
