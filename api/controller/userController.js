@@ -1,7 +1,7 @@
 const User = require("../domain/domainServices/models/userModel")//On import le model pour le controller
 const BDD = require('../domain/data/dbConnection');//on importe la bdd
 const bcrypt = require('bcrypt');
-const ensureToken = require('../config/token')
+const jwt =require('jsonwebtoken')
 
 
 
@@ -10,6 +10,10 @@ const ensureToken = require('../config/token')
 
 module.exports = {
 
+ getPageConnexion(req,res){//Permet d'afficher la page index
+     res.render('index')
+ }, 
+ 
 // Create Part 
 createUser(req, res) {//On crée un fonction create, on instancie la requete et la reponse
     User.findOne({ Email: req.body.Email }).then(result => {//on lui dit de chercher dans les Users si l'email n'existe deja pas dans la bdd
