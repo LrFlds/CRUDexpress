@@ -10,10 +10,17 @@ const jwt =require('jsonwebtoken')
 
 module.exports = {
 
+    /****************APPEL DES PAGES************************/
  getPageConnexion(req,res){//Permet d'afficher la page index
      res.render('index')
  }, 
- 
+ getPageInscription(req,res){
+    res.render('form_inscription')
+ },
+ getPageProfil(req,res){
+     res.render('profil')
+ },
+
 // Create Part 
 createUser(req, res) {//On crée un fonction create, on instancie la requete et la reponse
     User.findOne({ Email: req.body.Email }).then(result => {//on lui dit de chercher dans les Users si l'email n'existe deja pas dans la bdd
