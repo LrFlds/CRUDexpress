@@ -1,7 +1,7 @@
 const express = require('express');
 const app = express();
 const userRoute= require('./routes/userRoute');//on importe le router du user
-
+const path = require("path")
 
 
 /***********CONFIG***********/
@@ -13,6 +13,7 @@ app.use(express.urlencoded({extended:true}))
 app.set('views', './views')//pour que express sache ou sont nos views on doit lui définir dans l'app
 app.set('view engine','ejs')//on défnit notre moteur de template
 
+app.use('/public', express.static(__dirname + '/public'));
 
 
 /***********ROUTES***********/

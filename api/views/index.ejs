@@ -14,14 +14,14 @@
 
                     <h2>Connexion via notre formulaire.</h2>
 
-                    <div>
+                    <div class="box-input">
                         <label for="mail">E-mail</label>
-                        <input type="email" name="mail" id="mail">
+                        <input type="email" name="mail" id="mail" class="style-input">
                     </div>
 
-                    <div>
+                    <div class="box-input">
                         <label for="mdp">Mot de passe</label>
-                        <input type="password" name="mdp" id="mdp">
+                        <input type="password" name="mdp" id="mdp" class="style-input">
                         <a href="">Mot de passe oublié ?</a>
                     </div>
 
@@ -31,22 +31,21 @@
 
                 <h2>Ou connectez-vous via :</h2>
 
-                <div>
-                    <img src="" alt="logo facebook">
-                    <img src="" alt="logo google">
+                <div class="social">
+                    <img src="../public/ico/facebook.png" alt="logo facebook">
+                    <img src="../public/ico/google.png" alt="logo google">
                 </div>
 
-                <div>
-                    <div>
-                        <button>   
-                            Inscription
-                        </button>
-                    </div>
-                    <div>
-                        <button>
-                            Connexion
-                        </button>
-                    </div>
+                <div class="box-button">
+                    <button>   
+                        <p>Inscription</p>
+                        <!-- <%-include("../views/form_inscription.ejs");%>  -->
+                    </button>
+               
+                    <button>
+                        <p>Connexion</p>
+                        <!-- <%-include("./profil.ejs");%>  -->
+                    </button>
                 </div>
             </div>
         </div>
