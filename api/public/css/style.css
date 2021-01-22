@@ -7,8 +7,15 @@
     scroll-behavior: smooth;
 }
 
+/* SignUp part  */
+.main-box-signup {
+    background-image: url("../css/img/img-signup.jpg");
+    width: 100%;
+    height: 100%;
+}
+
 .main-box-signin {
-    background-image: url("./img/img-signin.jpg");
+    background-image: url("../css/img/img-signin.jpg");
     width: 100%;
     height: 100%;
 }
@@ -20,5 +27,5 @@
 }
 
 .style-input {
-    
+
 }
