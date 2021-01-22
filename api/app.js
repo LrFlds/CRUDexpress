@@ -12,7 +12,7 @@ app.use(express.urlencoded({extended:true}))
 /************EJS*************/ 
 app.set('views', './views')//pour que express sache ou sont nos views on doit lui définir dans l'app
 app.set('view engine','ejs')//on défnit notre moteur de template
-
+app.use(express.static(__dirname + '/public'));
 
 
 /***********ROUTES***********/
